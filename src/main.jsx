@@ -16,7 +16,7 @@ const metrics = [['50+', 'Happy Clients', Users], ['120+', 'Projects Delivered',
 const industries = ['Healthcare', 'Financial Services', 'Manufacturing', 'Retail & Commerce', 'Education', 'Public Sector'];
 
 function Brand() {
-  return <a className="brand" href="#top" aria-label="Zevora home"><span className="brand-symbol">Z</span><span className="brand-copy"><strong>ZEVORA</strong><small>AI TECH <i>PRIVATE LIMITED</i></small></span></a>;
+  return <a className="brand" href="#top" aria-label="Zevora home"><span className="brand-symbol">Z</span><span className="brand-copy"><strong>ZEVORA</strong><small>AI TECH</small></span></a>;
 }
 function HeroVisual() {
   return <div className="hero-visual" aria-label="Zevora AI technology mark"><div className="visual-orbit orbit-one" /><div className="visual-orbit orbit-two" /><div className="visual-orbit orbit-three" /><div className="visual-core"><span className="core-pulse" /><strong>Z</strong><span className="core-ai">AI</span></div><div className="visual-label label-top"><span className="status-dot" /> SYSTEMS ONLINE</div><div className="visual-label label-bottom">ZEVORA AI <span>↗</span></div><div className="node node-a"><Code2 size={15} /></div><div className="node node-b"><Globe2 size={15} /></div><div className="node node-c"><BrainCircuit size={15} /></div></div>;
