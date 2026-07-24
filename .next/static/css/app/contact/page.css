@@ -1,0 +1,13 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./components/common/InteriorPage.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.InteriorPage_page__L7yDf { padding-top: 106px; }
+.InteriorPage_hero__Dq2X_ { min-height: 530px; display: flex; align-items: center; background: radial-gradient(circle at 80% 40%, rgba(17, 87, 220, .28), transparent 35%), #07101d; border-bottom: 1px solid var(--line); }
+.InteriorPage_hero__Dq2X_ h1 { max-width: 760px; }
+.InteriorPage_description__oJ_Hb { max-width: 570px; color: var(--muted); line-height: 1.7; font-size: 16px; margin: 26px 0 32px; }
+.InteriorPage_content__onDvI { padding: 115px 0; background: #090f1d; }
+.InteriorPage_contentGrid__NUnzl { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 90px; gap: 90px; }
+.InteriorPage_content__onDvI h2 { font: 500 clamp(34px, 4vw, 54px) 'Space Grotesk'; line-height: 1.05; margin: 0; }
+.InteriorPage_contentText__NQs0T { color: var(--muted); line-height: 1.75; max-width: 500px; margin-bottom: 28px; }
+@media (max-width: 900px) { .InteriorPage_contentGrid__NUnzl { grid-template-columns: 1fr; gap: 48px; } }
+
