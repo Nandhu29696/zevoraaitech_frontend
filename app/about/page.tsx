@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Linkedin } from "lucide-react";
 import { aboutPage, stats } from "@/data/site";
@@ -69,26 +70,76 @@ export default function AboutPage() {
 
             {/* Leadership Team */}
             <section className="team-section">
-                <div className="container">
-                    <div className="center-heading">
-                        <p className="eyebrow">Leadership</p>
-                        <h2>The people <em>behind the work.</em></h2>
-                    </div>
-                    <div className="team-grid">
-                        {aboutPage.team.map((member) => (
-                            <div className="team-card" key={member.name}>
-                                <div className="member-avatar">{member.initials}</div>
-                                <div className="member-info">
+                <div className="container leadership-grid">
+                    {aboutPage.team.map((member, index) => (
+                        <article className={`leader-card ${index === 0 ? "leader-card-primary" : "leader-card-secondary"}`} key={member.name}>
+                            <div className="leader-portrait">
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    width={620}
+                                    height={760}
+                                    priority={index === 0}
+                                    className="leader-image"
+                                />
+                            </div>
+
+                            <div className="leader-content">
+                                {index === 0 && (
+                                    <div className="leader-badge">
+                                        <span className="leader-badge-icon">★</span>
+                                        <span>Leading the Company</span>
+                                    </div>
+                                )}
+
+                                <div className="leader-heading">
                                     <h3>{member.name}</h3>
-                                    <p className="member-role">{member.role}</p>
-                                    <p className="member-bio">{member.bio}</p>
-                                    <a href={member.linkedin} className="member-linkedin" aria-label={`Connect with ${member.name} on LinkedIn`}>
-                                        <Linkedin size={15} /> LinkedIn
+
+                                    <p className="leader-role">
+                                        {member.role}
+                                    </p>
+                                </div>
+
+                                {index === 0 && member.highlight && (
+                                    <div className="leader-strap">
+                                        <span className="leader-strap-icon">★</span>
+                                        <span>{member.highlight}</span>
+                                    </div>
+                                )}
+
+                                <p className="leader-copy">
+                                    {member.bio}
+                                </p>
+
+                                <div className="leader-actions">
+                                    <a
+                                        href={member.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="leader-link"
+                                        aria-label={`Connect with ${member.name} on LinkedIn`}
+                                    >
+                                        <span className="linkedin-mark">in</span>
+                                        <span>LinkedIn</span>
+                                        <span className="leader-link-arrow">↗</span>
                                     </a>
                                 </div>
+
+                                {index === 0 && member.summary && (
+                                    <div className="leader-summary">
+                                        <div className="leader-summary-icon">
+                                            ✦
+                                        </div>
+
+                                        <div className="leader-summary-content">
+                                            <strong>Overall Leadership</strong>
+                                            <p>{member.summary}</p>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
-                        ))}
-                    </div>
+                        </article>
+                    ))}
                 </div>
             </section>
 

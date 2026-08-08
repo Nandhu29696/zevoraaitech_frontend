@@ -1172,76 +1172,622 @@ h2 em {
 }
 
 .team-section {
-    padding: 100px 0;
-    background: #090f1d;
+    padding: 24px 0 40px;
+    background: #050b17;
 }
 
-.team-grid {
+/* =========================================================
+   LEADERSHIP GRID
+========================================================= */
+
+.leadership-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 52px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+
+    max-width: 1380px;
+    margin: 0 auto;
 }
 
-.team-card {
+
+/* =========================================================
+   LEADER CARD
+========================================================= */
+
+.leader-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: stretch;
+
+    min-height: 680px;
+    height: 680px;
+
+    padding: 18px 22px 18px 18px;
+
+    overflow: visible;
+
+    border: 1px solid rgba(89, 119, 161, 0.45);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 18, 33, 0.98),
+            rgba(7, 21, 36, 1)
+        );
+
+    box-shadow:
+        inset 0 0 0 1px rgba(129, 151, 180, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.leader-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(129, 151, 180, 0.12),
+        0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   PRIMARY
+========================================================= */
+
+.leader-card-primary {
+    border-color: rgba(245, 189, 70, 0.95);
+    box-shadow:
+        0 0 0 1px rgba(245, 189, 70, 0.18),
+        0 18px 34px rgba(0, 0, 0, 0.16);
+}
+
+.leader-card-primary:hover {
+    border-color: rgba(245, 189, 70, 1);
+    box-shadow:
+        0 0 0 1px rgba(245, 189, 70, 0.22),
+        0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.leader-card-secondary {
+    border-color: rgba(81, 112, 155, 0.4);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4, 17, 30, 0.96),
+            rgba(6, 22, 37, 0.98)
+        );
+}
+
+
+/* =========================================================
+   SECONDARY
+========================================================= */
+
+.leader-card-secondary {
+    border-color: rgba(81, 112, 155, 0.4);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(4, 17, 30, 0.96),
+            rgba(6, 22, 37, 0.98)
+        );
+}
+
+
+/* =========================================================
+   CARD DECORATION
+========================================================= */
+
+.leader-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 55% 32%,
+            rgba(18, 57, 94, 0.5),
+            rgba(5, 19, 33, 0) 55%
+        );
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PORTRAIT
+========================================================= */
+
+.leader-portrait,
+.leader-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Keep image centered and large */
+
+.leader-portrait {
     display: flex;
-    gap: 28px;
-    align-items: flex-start;
-    padding: 36px;
-    border: 1px solid var(--line);
-    background: linear-gradient(145deg, rgba(17, 28, 51, .65), rgba(8, 13, 25, .4));
-    transition: border-color .25s ease;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 520px;
+    padding: 8px 4px 0;
+    overflow: visible;
 }
 
-.team-card:hover {
-    border-color: rgba(52, 227, 255, .35);
+.leader-image {
+    display: block;
+    width: min(100%, 460px);
+    height: 540px;
+    object-fit: cover;
+    object-position: center top;
+    filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.45));
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.member-avatar {
-    width: 80px;
-    height: 80px;
-    min-width: 80px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue), var(--blue));
+.leader-card:hover .leader-image {
+    transform: translateY(-4px) scale(1.015);
+    filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.5));
+}
+
+.leader-card-secondary .leader-image {
+    width: min(100%, 390px);
+    height: 540px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.leader-content {
     display: flex;
+    flex-direction: column;
+
+    align-self: stretch;
+
+    min-width: 0;
+
+    padding: 14px 4px 0 6px;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.leader-badge {
+    display: inline-flex;
+
     align-items: center;
     justify-content: center;
-    font: 700 24px 'Space Grotesk';
-    color: white;
-}
 
-.member-info h3 {
-    font-size: 20px;
-    margin-bottom: 4px;
-}
+    gap: 9px;
 
-.member-role {
-    color: var(--blue);
-    font-size: 11px;
-    letter-spacing: .12em;
+    width: fit-content;
+
+    min-height: 34px;
+
+    padding: 7px 14px;
+
+    margin: 0 0 18px;
+
+    border: 1px solid rgba(245, 189, 70, 0.9);
+
+    border-radius: 6px;
+
+    background: rgba(9, 21, 31, 0.7);
+
+    color: #f5c45d;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
     text-transform: uppercase;
-    margin: 0 0 14px;
 }
 
-.member-bio {
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.7;
-    margin: 0 0 16px;
+.leader-badge-icon,
+.leader-strap-icon,
+.leader-summary-icon {
+    color: #f5c45d;
 }
 
-.member-linkedin {
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.leader-content h3 {
+    margin: 0;
+    color: #f7faff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(2rem, 2.4vw, 3rem);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.leader-role {
+    margin: 12px 0 14px;
+
+    color: #29a7ff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HIGHLIGHT STRAP
+========================================================= */
+
+.leader-strap {
     display: inline-flex;
+
     align-items: center;
-    gap: 7px;
-    color: var(--blue);
-    font-size: 13px;
-    font-weight: 600;
-    transition: opacity .2s ease;
+
+    gap: 9px;
+
+    width: fit-content;
+
+    padding: 0 0 7px;
+
+    margin-bottom: 20px;
+
+    border-bottom:
+        1px solid rgba(115, 145, 182, 0.55);
+
+    color: #62d0ff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.07em;
+
+    text-transform: uppercase;
 }
 
-.member-linkedin:hover {
-    opacity: .75;
+
+/* =========================================================
+   BIO
+========================================================= */
+
+.leader-copy {
+    max-width: 33ch;
+    margin: 0;
+    color: rgba(235, 241, 255, 0.9);
+    font-size: 15px;
+    line-height: 1.72;
+}
+
+
+/* =========================================================
+   LINKEDIN
+========================================================= */
+
+.leader-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    align-self: flex-start;
+
+    margin-top: 20px;
+
+    color: #62d0ff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.leader-link:hover {
+    color: #ffffff;
+
+    transform: translateX(2px);
+}
+
+
+.linkedin-mark {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 5px;
+
+    background: rgba(98, 208, 255, 0.1);
+
+    color: #62d0ff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.leader-summary {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(115, 145, 182, 0.55);
+
+    min-height: 88px;
+}
+
+
+.leader-summary-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    border:
+        1px solid rgba(245, 189, 70, 0.9);
+
+    border-radius: 50%;
+
+    background:
+        rgba(245, 189, 70, 0.08);
+
+    color: #f5c45d;
+
+    font-size: 13px;
+}
+
+
+.leader-summary strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #f5c45d;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+
+.leader-summary p {
+    margin: 0;
+
+    color: rgba(235, 241, 255, 0.78);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SECONDARY CARD
+========================================================= */
+
+.leader-card-secondary .leader-content {
+    padding-top: 70px;
+}
+
+.leader-card-secondary .leader-content h3 {
+    font-size: clamp(2rem, 2.4vw, 3rem);
+}
+
+.leader-card-secondary .leader-role {
+    color: #3cb5ff;
+}
+
+.leader-card-secondary .leader-copy {
+    max-width: 30ch;
+}
+
+.leader-card-secondary .leader-link {
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+    .leader-card {
+        min-height: 700px;
+
+        grid-template-columns:
+            0.98fr 1.02fr;
+    }
+
+    .leader-portrait {
+        min-height: 660px;
+    }
+
+    .leader-copy {
+        max-width: 38ch;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-card {
+        min-height: 620px;
+
+        grid-template-columns:
+            0.9fr 1.1fr;
+    }
+
+    .leader-portrait {
+        min-height: 580px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .leader-card {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 16px 16px 24px;
+    }
+
+    .leader-portrait {
+        min-height: 400px;
+
+        max-height: 500px;
+
+        padding-top: 0;
+    }
+
+    .leader-image {
+        width: min(100%, 390px);
+    }
+
+    .leader-content {
+        padding: 24px 8px 0;
+    }
+
+    .leader-content h3 {
+        font-size: 2.4rem;
+    }
+
+    .leader-copy,
+    .leader-card-secondary .leader-copy {
+        max-width: none;
+    }
+
+    .leader-summary {
+        margin-top: 28px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .leader-card {
+        padding: 12px 12px 20px;
+    }
+
+    .leader-portrait {
+        min-height: 350px;
+    }
+
+    .leader-content {
+        padding: 22px 6px 0;
+    }
+
+    .leader-content h3 {
+        font-size: 2rem;
+
+        letter-spacing: -0.035em;
+    }
+
+    .leader-role {
+        font-size: 10px;
+    }
+
+    .leader-copy {
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+    .leader-badge {
+        font-size: 9px;
+
+        padding: 6px 11px;
+    }
 }
 
 /* ─── Services Detail Page ───────────────────────────────────────────────── */
