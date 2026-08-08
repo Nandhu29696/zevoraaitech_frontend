@@ -890,6 +890,15 @@ h2 em {
         padding-top: 140px;
     }
 
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+
     .hero-visual {
         min-height: 380px;
     }
@@ -1015,6 +1024,16 @@ h2 em {
 
     .service-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .project-card {
+        min-height: auto;
+        padding: 24px;
     }
 
     .stats-grid {

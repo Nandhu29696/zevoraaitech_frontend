@@ -118,22 +118,46 @@ export const services: Service[] = [
 
 export const featuredProjects = [
   {
-    title: "AI Knowledge Assistant",
-    description: "A conversational AI experience that helps teams search internal knowledge instantly and work smarter.",
-    tech: ["Next.js", "Azure OpenAI", "RAG"],
-    demoUrl: "https://example.com/demo/ai-assistant",
+    title: "Healthcare Management System",
+    description: "Developed a healthcare solution to streamline patient management, appointments, and operational workflows.",
+    tech: ["Healthcare", "Workflow", "Operations"],
+    demoUrl: "https://example.com/demo/healthcare-management-system",
   },
   {
-    title: "Smart Operations Dashboard",
-    description: "A real-time operations view that combines analytics, alerts, and workflow automation in one place.",
-    tech: ["React", "Node.js", "Power BI"],
-    demoUrl: "https://example.com/demo/operations-dashboard",
+    title: "Job Portal with AI & Web Scraping",
+    description: "Built an online job search platform with intelligent job aggregation using web scraping and smart search features.",
+    tech: ["AI", "Web Scraping", "Search"],
+    demoUrl: "https://example.com/demo/job-portal-ai-web-scraping",
   },
   {
-    title: "Customer Experience Platform",
-    description: "A polished digital experience designed to simplify onboarding, support, and service delivery for modern clients.",
-    tech: ["TypeScript", "Cloud", "Analytics"],
-    demoUrl: "https://example.com/demo/customer-platform",
+    title: "LetsCalm – AI Mobile Application",
+    description: "Developed an AI-powered mobile application focused on mental wellness and personalized user support.",
+    tech: ["Mobile", "AI", "Wellness"],
+    demoUrl: "https://example.com/demo/letscalm-ai-mobile-application",
+  },
+  {
+    title: "Tree Planting Platform",
+    description: "Designed and developed a website that promotes tree plantation initiatives and environmental awareness.",
+    tech: ["Web", "Environment", "Sustainability"],
+    demoUrl: "https://example.com/demo/tree-planting-platform",
+  },
+  {
+    title: "AI Email Bot",
+    description: "Created an AI-powered email assistant to automate email drafting, replies, and workflow management.",
+    tech: ["AI", "Automation", "Email"],
+    demoUrl: "https://example.com/demo/ai-email-bot",
+  },
+  {
+    title: "ERP System (Current Project)",
+    description: "Developing a comprehensive Enterprise Resource Planning (ERP) solution for business operations and resource management.",
+    tech: ["ERP", "Operations", "Current"],
+    demoUrl: "https://example.com/demo/erp-system-current-project",
+  },
+  {
+    title: "Creakers Sales Management (Current Project)",
+    description: "Building a sales management platform to improve lead tracking, customer management, and sales performance.",
+    tech: ["Sales", "CRM", "Analytics"],
+    demoUrl: "https://example.com/demo/creakers-sales-management-current-project",
   },
 ];
 
