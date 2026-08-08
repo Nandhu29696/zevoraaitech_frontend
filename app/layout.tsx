@@ -6,6 +6,9 @@ import { Footer } from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Zevora AI Tech | Innovating Today, Intelligent Tomorrow",
   description: "Zevora AI Tech builds intelligent digital solutions across AI, cloud, software, automation, and data analytics.",
+  icons: {
+    icon: "/images/hero-image.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
