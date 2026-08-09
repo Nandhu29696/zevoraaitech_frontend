@@ -225,7 +225,7 @@ export const aboutPage = {
       summary: "Sets the vision, strategy and direction for Zevora AI Tech.",
       bio: "Sugasini leads Zevora AI Tech with a clear vision for the future of intelligent systems. With deep expertise in AI strategy and enterprise transformation, she guides the company's mission to help organisations embrace technology as a competitive advantage. Her leadership philosophy centres on clarity, accountability, and building teams that do meaningful work.",
       image: "/images/suga.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/sugasini-m-539bab417/",
     },
     {
       name: "Nandhakumar M",
@@ -235,7 +235,7 @@ export const aboutPage = {
       summary: "Nandhakumar oversees operations, partnerships, and the delivery of every client engagement at Zevora AI Tech.",
       bio: "Nandhakumar oversees operations, partnerships, and the delivery of every client engagement at Zevora AI Tech. With a strong background in software engineering and business development, he ensures the company's capabilities keep pace with the demands of an evolving market. He is known for bridging the gap between technical possibility and practical outcomes.",
       image: "/images/nand.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/nandhakumar-m-85344a178/",
     },
   ],
 };
