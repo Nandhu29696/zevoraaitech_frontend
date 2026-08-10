@@ -31,6 +31,11 @@ export default function HomePage() {
               <Link className="button button-ghost" href={homePage.hero.cta2.href}>{homePage.hero.cta2.label} <ArrowUpRight size={17} /></Link>
             </div>
             <div className="hero-note"><span className="pulse-dot" /> {homePage.hero.note}</div>
+            <div className="hero-trust">
+              <span>AI strategy</span>
+              <span>Cloud systems</span>
+              <span>Automation</span>
+            </div>
           </motion.div>
           <motion.div className="hero-visual" initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.15 }}>
             <div className="visual-orbit orbit-one" />
@@ -46,23 +51,50 @@ export default function HomePage() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">What we do</p>
-              <h2>Intelligent Solutions For Your Business</h2>
+              <h2>Intelligent solutions for modern business growth</h2>
             </div>
-            <p>We combine technology, creativity, and intelligence to build solutions that drive growth, efficiency, and excellence.</p>
+            <p>We combine strategic thinking, engineering depth, and AI capability to build systems that create measurable operational advantage.</p>
           </div>
           <motion.div className="service-grid" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }} transition={{ staggerChildren: 0.08 }}>
             {services.map((service) => {
               const Icon = service.icon;
               return (
                 <motion.article className="service-card" variants={reveal} key={service.title}>
-                  <Icon size={38} strokeWidth={1.4} />
+                  <div className="service-icon-wrap"><Icon size={38} strokeWidth={1.4} /></div>
                   <h3>{service.title}</h3>
                   <p>{service.shortDescription}</p>
+                  <div className="service-meta">
+                    {service.highlights.slice(0, 2).map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
                   <Link href="/services" className="card-link">Learn more <ArrowRight size={16} /></Link>
                 </motion.article>
               );
             })}
           </motion.div>
+        </div>
+      </section>
+
+      <section className="section delivery-section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">{homePage.globalDelivery.eyebrow}</p>
+              <h2>{homePage.globalDelivery.heading}</h2>
+            </div>
+            <p>{homePage.globalDelivery.intro}</p>
+          </div>
+
+          <div className="delivery-grid">
+            {homePage.globalDelivery.items.map((item) => (
+              <article className="delivery-card" key={item.title}>
+                <span className="delivery-index">{item.number}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -86,8 +118,8 @@ export default function HomePage() {
                 <div className="project-tags">
                   {project.tech.map((item) => <span key={item}>{item}</span>)}
                 </div>
-                <a className="card-link" href={project.demoUrl} target="_blank" rel="noreferrer">
-                  View demo <ArrowUpRight size={16} />
+                <a className="card-link" href={project.demoUrl} target={project.demoUrl.startsWith("http") ? "_blank" : undefined} rel={project.demoUrl.startsWith("http") ? "noreferrer" : undefined}>
+                  Discuss this engagement <ArrowUpRight size={16} />
                 </a>
               </article>
             ))}
@@ -170,7 +202,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">{homePage.cta.eyebrow}</p>
             <h2>{homePage.cta.heading}<br />
-            <em>{homePage.cta.headingAccent}</em></h2>
+              <em>{homePage.cta.headingAccent}</em></h2>
           </div>
           <Link className="button button-light" href={homePage.cta.ctaHref}>{homePage.cta.ctaLabel} <ArrowUpRight size={17} /></Link>
         </div>
