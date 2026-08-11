@@ -15,7 +15,7 @@ export const company = {
   phone2: "+91 63856 92143",
   location: "Coimbatore, India",
   copyright: `© ${new Date().getFullYear()} Zevora AI Tech Private Limited`,
-  footerTagline: "Innovating the future with AI.",
+  footerTagline: "Building practical AI products for growth.",
   social: { linkedin: "#", instagram: "#", facebook: "#" },
 };
 
@@ -40,10 +40,10 @@ export const homePage = {
     heading: "Innovating Today,",
     headingAccent: "Intelligent ",
     headingAccent_sub: "Tomorrow.",
-    description: "Zevora AI Tech delivers next-gen IT and AI solutions that empower businesses to innovate, automate, and scale in a rapidly evolving digital world.",
-    note: "Global delivery across North America, Europe, the Middle East, and APAC",
-    cta1: { label: "Book a discovery call", href: "/contact" },
-    cta2: { label: "See our process", href: "/about" },
+    description: "We build AI-backed products and modern software that help teams move faster, cut manual effort, and launch with confidence.",
+    note: "Working with early-stage and scaling teams across APAC, Europe, and North America.",
+    cta1: { label: "Start a project", href: "/contact" },
+    cta2: { label: "See our approach", href: "/about" },
   },
   globalDelivery: {
     eyebrow: "Global delivery",
@@ -60,14 +60,14 @@ export const homePage = {
     eyebrow: "Why Zevora",
     heading: "Complex problems.",
     headingAccent: "Clear business outcomes.",
-    body: "We blend strategy, product thinking, and technical execution to help organizations modernize faster, operate smarter, and build experience-led growth that works across borders and business units.",
+    body: "We combine product thinking, design, and engineering so you can turn ideas into working software without the usual delays.",
     ctaLabel: "Meet our approach",
     ctaHref: "/about",
   },
   cta: {
     eyebrow: "Ready to grow smarter?",
-    heading: "Let’s build the",
-    headingAccent: "next advantage together.",
+    heading: "Ready to start building",
+    headingAccent: "your next AI advantage together.",
     ctaLabel: "Talk to our team",
     ctaHref: "/contact",
   },
@@ -212,15 +212,15 @@ export const faqs = [
 export const aboutPage = {
   eyebrow: "About Zevora",
   title: "Built to turn complexity into momentum.",
-  description: "We help organizations modernize operations, improve customer experience, and use AI and digital technology to create measurable business advantage.",
+  description: "We help startups and ambitious teams build practical AI and software solutions that accelerate growth and simplify operations.",
   motive: {
     eyebrow: "Our mission",
     heading: "Technology should unlock momentum,",
     headingAccent: "not create friction.",
     paragraphs: [
-      "Zevora AI Tech was founded to close the gap between strategic ambition and practical execution. We believe businesses do not need more complexity — they need better systems, clearer decisions, and technology that actually supports growth.",
-      "Our team brings together strategy, engineering, and product thinking to help organizations move from idea to execution with confidence. Whether you are modernizing legacy systems, automating operations, or building a new digital experience, we design solutions that are useful, scalable, and built for real-world outcomes.",
-      "We work as a partner, not a vendor. That means we listen carefully, challenge assumptions, and build technology with the discipline to perform in the real world and the flexibility to adapt as your business evolves.",
+      "Zevora AI Tech was founded to help fast-moving companies turn ambitious ideas into working products. We focus on the work that moves teams forward, not on buzzwords.",
+      "Our team blends product thinking, engineering, and operations so we can help you launch faster and iterate with confidence.",
+      "We partner with founders and leaders to solve real problems, build meaningful products, and keep the work grounded in value.",
     ],
   },
   values: [
@@ -332,8 +332,8 @@ export const careersPage = {
 
 export const contactPage = {
   eyebrow: "Contact",
-  title: "Tell us what you want to make possible.",
-  description: "Share a little about the challenge, opportunity, or idea on your mind. We will take it from there.",
+  title: "Tell us what you want to build.",
+  description: "Share your challenge, idea, or growth goal and we’ll respond with a practical next step.",
   infoItems: [
     { label: "Email us", value: "hello@zevora.ai", href: "mailto:hello@zevora.ai" },
     { label: "Call us", value: "+91 63856 92143", href: "tel:+916385692143" },

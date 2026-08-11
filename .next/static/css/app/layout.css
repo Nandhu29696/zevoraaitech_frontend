@@ -985,16 +985,18 @@ h2 em {
   }
   .brand,
     .brand img {
-    width: 126px;
-    height: 63px;
+    width: 180px;
+    height: 100px;
   }
   .hero-section,
     .hero-content {
     min-height: auto;
   }
   .hero-content {
-    padding-top: 105px;
-    gap: 18px;
+    padding-top: 1px;
+    gap: 50px;
+    display: flex;
+    flex-direction: column-reverse;
   }
   h1 {
     font-size: clamp(34px, 9vw, 46px);
@@ -1010,7 +1012,6 @@ h2 em {
     max-width: 240px;
   }
   .hero-visual {
-    width: min(100%, 360px);
     min-height: 290px;
     justify-self: center;
     order: 2;
@@ -1056,6 +1057,7 @@ h2 em {
   .stat {
     justify-content: flex-start;
     gap: 10px;
+    padding: 0 30px;
   }
   .stat strong {
     font-size: 22px;
