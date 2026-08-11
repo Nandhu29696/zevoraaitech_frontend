@@ -13,14 +13,17 @@ export function Footer() {
         </div>
         <div className="footer-links">
           <p className="footer-label">Explore</p>
-          {navigation.slice(1).map((item) => (
+          {navigation.filter((item) => item.active_status !== false).slice(1).map((item) => (
             <Link href={item.href} key={item.href}>{item.label}</Link>
           ))}
         </div>
         <div className="footer-links">
           <p className="footer-label">Connect</p>
           <a href={`mailto:${company.email}`}>{company.email}</a>
-          <a href={`tel:${company.phone.replace(/[^+\d]/g, '')}`}>{company.phone}</a>
+          <div className="footer-phone">
+            <a href={`tel:${company.phone.replace(/[^+\d]/g, '')}`}>{company.phone},</a>
+            <a href={`tel:${company.phone2.replace(/[^+\d]/g, '')}`}>{company.phone2}</a>
+          </div>
           <div className="socials">
             <a href={company.social.linkedin} aria-label="LinkedIn"><Linkedin size={18} /></a>
             <a href={company.social.instagram} aria-label="Instagram"><Instagram size={18} /></a>

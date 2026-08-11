@@ -100,13 +100,6 @@ export default function AboutPage() {
                                     </p>
                                 </div>
 
-                                {index === 0 && member.highlight && (
-                                    <div className="leader-strap">
-                                        <span className="leader-strap-icon">★</span>
-                                        <span>{member.highlight}</span>
-                                    </div>
-                                )}
-
                                 <p className="leader-copy">
                                     {member.bio}
                                 </p>
@@ -124,6 +117,23 @@ export default function AboutPage() {
                                         <span className="leader-link-arrow">↗</span>
                                     </a>
                                 </div>
+
+                                {member.features && (
+                                    <div className="leader-features">
+                                        {member.features.map((f) => {
+                                            const Icon = f.icon as any;
+                                            return (
+                                                <div className="leader-feature" key={f.title}>
+                                                    <div className="leader-feature-icon"><Icon size={18} /></div>
+                                                    <div className="leader-feature-text">
+                                                        <strong>{f.title}</strong>
+                                                        <p>{f.description}</p>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
 
                                 {index === 0 && member.summary && (
                                     <div className="leader-summary">
