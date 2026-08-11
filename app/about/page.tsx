@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Linkedin } from "lucide-react";
-import { aboutPage, stats } from "@/data/site";
+import { ArrowRight, ArrowUpRight, Linkedin, MessageCircle } from "lucide-react";
+import { aboutPage, company, stats } from "@/data/site";
 
 export const metadata = {
     title: "About | Zevora AI Tech",
@@ -114,6 +114,17 @@ export default function AboutPage() {
                                     >
                                         <span className="linkedin-mark">in</span>
                                         <span>LinkedIn</span>
+                                        <span className="leader-link-arrow">↗</span>
+                                    </a>
+                                    <a
+                                        href={`https://wa.me/${(index === 0 ? company.phone : company.phone2).replace(/\D/g, "")}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="leader-link"
+                                        aria-label={`Contact ${member.name} on WhatsApp`}
+                                    >
+                                        <MessageCircle size={10} className="whatsapp-mark" />
+                                        <span>WhatsApp</span>
                                         <span className="leader-link-arrow">↗</span>
                                     </a>
                                 </div>

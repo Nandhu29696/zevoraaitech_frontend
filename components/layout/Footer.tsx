@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Linkedin, Instagram, Facebook } from "lucide-react";
+import { ArrowUpRight, Linkedin, Instagram, Facebook, MessageCircle } from "lucide-react";
 import { navigation, company } from "@/data/site";
 
 export function Footer() {
@@ -29,6 +29,7 @@ export function Footer() {
             <a href={company.social.instagram} aria-label="Instagram"><Instagram size={18} /></a>
             <a href={company.social.facebook} aria-label="Facebook"><Facebook size={18} /></a>
           </div>
+          
         </div>
       </div>
       <div className="container footer-bottom">
