@@ -34,8 +34,17 @@ export default function ContactPage() {
     const companyName =
       (data.get("company") as string)?.trim() || "";
 
-    const message =
-      (data.get("message") as string)?.trim() || "";
+    const phone =
+      (data.get("phone") as string)?.trim() || "";
+
+    const service =
+      (data.get("service") as string)?.trim() || "";
+
+    const budget =
+      (data.get("budget") as string)?.trim() || "";
+
+    const requirements =
+      (data.get("requirements") as string)?.trim() || "";
 
     // Honeypot field
     const website =
@@ -67,14 +76,24 @@ export default function ContactPage() {
       return;
     }
 
-    if (!message) {
-      setError("Please tell us how we can help.");
+    if (!phone) {
+      setError("Please enter your phone number.");
       return;
     }
 
-    if (message.length < 10) {
+    if (!service) {
+      setError("Please select a service.");
+      return;
+    }
+
+    if (!requirements) {
+      setError("Please tell us about your project requirements.");
+      return;
+    }
+
+    if (requirements.length < 10) {
       setError(
-        "Please provide a little more detail about your project."
+        "Please provide a little more detail about your project requirements."
       );
       return;
     }
@@ -101,7 +120,10 @@ export default function ContactPage() {
           name,
           email,
           company: companyName,
-          message,
+          phone,
+          service,
+          budget,
+          requirements,
           website,
         }),
       });
@@ -295,17 +317,83 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Message */}
+                {/* Phone */}
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="phone">
+                      Phone number *
+                    </label>
+
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      className="form-input"
+                      placeholder="+91 98765 43210"
+                      autoComplete="tel"
+                      maxLength={20}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="service">
+                      Service *
+                    </label>
+
+                    <select
+                      id="service"
+                      name="service"
+                      className="form-input"
+                      defaultValue=""
+                      required
+                    >
+                      <option value="" disabled>
+                        Select a service
+                      </option>
+                      <option value="Artificial Intelligence">Artificial Intelligence</option>
+                      <option value="Software Development">Software Development</option>
+                      <option value="Cloud Solutions">Cloud Solutions</option>
+                      <option value="Data Analytics">Data Analytics</option>
+                      <option value="Automation">Automation</option>
+                      <option value="Cybersecurity">Cybersecurity</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Budget */}
                 <div className="form-group">
-                  <label htmlFor="message">
-                    How can we help? *
+                  <label htmlFor="budget">
+                    Budget
+                  </label>
+
+                  <select
+                    id="budget"
+                    name="budget"
+                    className="form-input"
+                    defaultValue=""
+                  >
+                    <option value="">Select your budget range</option>
+                    <option value="Below $5k">Below $5k</option>
+                    <option value="$5k - $10k">$5k - $10k</option>
+                    <option value="$10k - $25k">$10k - $25k</option>
+                    <option value="$25k - $50k">$25k - $50k</option>
+                    <option value="$50k+">$50k+</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                </div>
+
+                {/* Requirements */}
+                <div className="form-group">
+                  <label htmlFor="requirements">
+                    Requirements *
                   </label>
 
                   <textarea
-                    id="message"
-                    name="message"
+                    id="requirements"
+                    name="requirements"
                     className="form-textarea"
-                    placeholder="Tell us about your project, challenge, or idea..."
+                    placeholder="Tell us about your project goals, timeline, and current challenges..."
                     autoComplete="off"
                     maxLength={5000}
                     rows={7}

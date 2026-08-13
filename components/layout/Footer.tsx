@@ -21,15 +21,35 @@ export function Footer() {
           <p className="footer-label">Connect</p>
           <a href={`mailto:${company.email}`}>{company.email}</a>
           <div className="footer-phone">
-            <a href={`tel:${company.phone.replace(/[^+\d]/g, '')}`}>{company.phone},</a>
-            <a href={`tel:${company.phone2.replace(/[^+\d]/g, '')}`}>{company.phone2}</a>
+            <a
+              href={`https://wa.me/${company.phone.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-whatsapp"
+            >
+              <MessageCircle size={12} />
+              {company.phone}
+            </a>
+            <a
+              href={`https://wa.me/${company.phone2.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-whatsapp"
+            >
+              <MessageCircle size={12} />
+              {company.phone2}
+            </a>
           </div>
           <div className="socials">
             <a href={company.social.linkedin} aria-label="LinkedIn"><Linkedin size={18} /></a>
             <a href={company.social.instagram} aria-label="Instagram"><Instagram size={18} /></a>
             <a href={company.social.facebook} aria-label="Facebook"><Facebook size={18} /></a>
           </div>
-          
+        </div>
+        <div className="footer-links footer-legal-links">
+          <p className="footer-label">Company</p>
+           <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/terms-conditions">Terms & Conditions</Link>
         </div>
       </div>
       <div className="container footer-bottom">

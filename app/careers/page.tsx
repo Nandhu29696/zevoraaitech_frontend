@@ -3,8 +3,8 @@ import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 import { careersPage, company } from "@/data/site";
 
 export const metadata = {
-  title: "Careers | Zevora AI Tech",
-  description: "Join the Zevora AI Tech team. Explore open roles and build technology that matters.",
+  title: "Careers | Suga S AI Tech",
+  description: "Join the Suga S AI Tech team. Explore open roles and build technology that matters.",
 };
 
 export default function CareersPage() {

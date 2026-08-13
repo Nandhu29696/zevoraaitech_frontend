@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { technologiesPage } from "@/data/site";
 
 export const metadata = {
-  title: "Technologies | Zevora AI Tech",
+  title: "Technologies | Suga S AI Tech",
   description: "Explore the modern, battle-tested technology stack we use to build intelligent, scalable solutions.",
 };
 

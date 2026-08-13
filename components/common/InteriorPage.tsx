@@ -15,7 +15,7 @@ export function InteriorPage({ eyebrow, title, description }: { eyebrow: string;
     <section className={styles.content}>
       <div className={`container ${styles.contentGrid}`}>
         <div>
-          <p className="eyebrow">Zevora AI Tech</p>
+          <p className="eyebrow">Suga S AI Tech</p>
           <h2>Technology should create <em>momentum.</em></h2>
         </div>
         <div>

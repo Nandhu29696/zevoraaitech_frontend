@@ -4,8 +4,8 @@ import { ArrowRight, ArrowUpRight, Linkedin, MessageCircle } from "lucide-react"
 import { aboutPage, company, stats } from "@/data/site";
 
 export const metadata = {
-    title: "About | Zevora AI Tech",
-    description: "Learn about Zevora AI Tech's mission, values, and the leadership team behind our work.",
+    title: "About | Suga S AI Tech",
+    description: "Learn about Suga S AI Tech's mission, values, and the leadership team behind our work.",
 };
 
 export default function AboutPage() {

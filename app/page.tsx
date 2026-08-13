@@ -40,7 +40,7 @@ export default function HomePage() {
           <motion.div className="hero-visual" initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.15 }}>
             <div className="visual-orbit orbit-one" />
             <div className="visual-orbit orbit-two" />
-            <Image src="/images/hero-image.png" alt="Zevora AI Tech logo" width={720} height={720} priority className="hero-logo" />
+            <Image src="/images/hero-image.png" alt="Suga S AI Tech logo" width={720} height={720} priority className="hero-logo" />
             <div className="visual-caption"><span>AI / 01</span><span>Future systems, built now</span></div>
           </motion.div>
         </div>
@@ -141,12 +141,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section split-section">
+      <section className="section split-section why-zevora-section">
         <div className="container split-grid">
           <div>
             <p className="eyebrow">{homePage.why.eyebrow}</p>
             <h2>{homePage.why.heading}<br /><em>{homePage.why.headingAccent}</em></h2>
             <p className="large-copy">{homePage.why.body}</p>
+            <div className="why-zevora-highlights">
+              <div>
+                <strong>Professionalism</strong>
+                <p>We work with discipline, clarity, and accountability at every stage of delivery.</p>
+              </div>
+              <div>
+                <strong>Customer-first approach</strong>
+                <p>We listen closely, align to your goals, and design practical solutions around real business needs.</p>
+              </div>
+            </div>
             <Link className="text-link" href={homePage.why.ctaHref}>{homePage.why.ctaLabel} <ArrowUpRight size={17} /></Link>
           </div>
           <div className="principles">

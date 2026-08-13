@@ -12,13 +12,14 @@ export function Header() {
   const pathname = usePathname();
 
   const closeMenu = () => setIsOpen(false);
-  const safePathname = pathname ?? "/";
+  const safePathname = pathname ?? "/";  
 
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="Zevora AI Tech home" onClick={closeMenu}>
-          <Image src="/images/logo.png" alt="Zevora AI Tech" width={240} height={84} priority />
+        <Link className="brand" href="/" aria-label="Suga S AI Tech home" onClick={closeMenu}>
+          <Image src="/images/logo.png" alt="Suga S AI Tech" 
+          width={170} height={70} priority />
         </Link>
 
         <nav className={`main-nav ${isOpen ? "is-open" : ""}`} aria-label="Main navigation">

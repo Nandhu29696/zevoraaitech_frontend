@@ -5,8 +5,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Zevora AI Tech | Innovating Today, Intelligent Tomorrow",
-  description: "Zevora AI Tech builds intelligent digital solutions across AI, cloud, software, automation, and data analytics.",
+  title: "Suga S AI Tech | Innovating Today, Intelligent Tomorrow",
+  description: "Suga S AI Tech builds intelligent digital solutions across AI, cloud, software, automation, and data analytics.",
   icons: {
     icon: "/images/hero-image.png",
   },

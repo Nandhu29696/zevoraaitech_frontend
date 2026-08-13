@@ -2,7 +2,7 @@ create a project(zevora-website)
 
 Vision
 
-Develop a modern, premium AI company website that showcases Zevora AI Tech's expertise in AI, Cloud, Software Development, Automation, and Data Analytics.
+Develop a modern, premium AI company website that showcases Suga S AI Tech's expertise in AI, Cloud, Software Development, Automation, and Data Analytics.
 
 Technology Stack
 Category	Technology

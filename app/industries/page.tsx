@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { industriesPage } from "@/data/site";
 
 export const metadata = {
-  title: "Industries | Zevora AI Tech",
+  title: "Industries | Suga S AI Tech",
   description: "AI and technology solutions tailored to manufacturing, healthcare, retail, finance, logistics, energy, education, and real estate.",
 };
 

@@ -3,8 +3,8 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { services, stats } from "@/data/site";
 
 export const metadata = {
-  title: "Solutions | Zevora AI Tech",
-  description: "Explore how Zevora AI Tech combines AI, cloud, software, and data to deliver end-to-end solutions for modern businesses.",
+  title: "Solutions | Suga S AI Tech",
+  description: "Explore how Suga S AI Tech combines AI, cloud, software, and data to deliver end-to-end solutions for modern businesses.",
 };
 
 const caseAreas = [

@@ -1,6 +1,6 @@
-# Zevora AI Tech Website
+# Suga S AI Tech Website
 
-A Next.js 15 App Router starter for Zevora AI Tech's public website.
+A Next.js 15 App Router starter for Suga S AI Tech's public website.
 
 ## Run locally
 

@@ -8,15 +8,22 @@ export async function POST(request: Request) {
       name,
       email,
       company,
+      phone,
+      service,
+      budget,
+      requirements,
       message,
     } = body;
 
+    const normalizedRequirements =
+      (requirements || message || "").toString().trim();
+
     // Validation
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !service || !normalizedRequirements) {
       return NextResponse.json(
         {
           success: false,
-          error: "Name, email and message are required.",
+          error: "Name, email, phone, service, and requirements are required.",
         },
         { status: 400 }
       );
@@ -46,11 +53,45 @@ export async function POST(request: Request) {
       company || ""
     );
 
-    // Message
-    formData.append(
-      process.env.GOOGLE_FORM_MESSAGE_ENTRY!,
-      message
-    );
+    // Phone
+    if (process.env.GOOGLE_FORM_PHONE_ENTRY && phone) {
+      formData.append(
+        process.env.GOOGLE_FORM_PHONE_ENTRY,
+        phone
+      );
+    }
+
+    // Service
+    if (process.env.GOOGLE_FORM_SERVICE_ENTRY && service) {
+      formData.append(
+        process.env.GOOGLE_FORM_SERVICE_ENTRY,
+        service
+      );
+    }
+
+    // Budget
+    if (process.env.GOOGLE_FORM_BUDGET_ENTRY && budget) {
+      formData.append(
+        process.env.GOOGLE_FORM_BUDGET_ENTRY,
+        budget
+      );
+    }
+
+    // Requirements
+    if (process.env.GOOGLE_FORM_REQUIREMENTS_ENTRY && normalizedRequirements) {
+      formData.append(
+        process.env.GOOGLE_FORM_REQUIREMENTS_ENTRY,
+        normalizedRequirements
+      );
+    }
+
+    // Message fallback for older form mappings
+    if (process.env.GOOGLE_FORM_MESSAGE_ENTRY && normalizedRequirements) {
+      formData.append(
+        process.env.GOOGLE_FORM_MESSAGE_ENTRY,
+        normalizedRequirements
+      );
+    }
 
     // Submit to Google Forms
     const googleResponse = await fetch(

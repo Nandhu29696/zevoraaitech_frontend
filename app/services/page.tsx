@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { servicesPage, services, process } from "@/data/site";
 
 export const metadata = {
-  title: "Services | Zevora AI Tech",
+  title: "Services | Suga S AI Tech",
   description: "Explore our full range of AI, software, cloud, data, automation, and cybersecurity services.",
 };
 

@@ -8,13 +8,13 @@ import {
 // ─── Company ──────────────────────────────────────────────────────────────────
 
 export const company = {
-  name: "Zevora AI Tech",
-  legalName: "Zevora AI Tech ",
+  name: "Suga S AI Tech",
+  legalName: "Suga S AI Tech ",
   email: "hello@zevora.ai",
   phone: "+91 95978 95084",
   phone2: "+91 63856 92143",
   location: "Coimbatore, India",
-  copyright: `© ${new Date().getFullYear()} Zevora AI Tech `,
+  copyright: `© ${new Date().getFullYear()} Suga S AI Tech `,
   footerTagline: "Building practical AI products for growth.",
   social: { linkedin: "#", instagram: "#", facebook: "#" },
 };
@@ -202,7 +202,7 @@ export const principles = [
 // ─── FAQs ─────────────────────────────────────────────────────────────────────
 
 export const faqs = [
-  { question: "What does Zevora AI Tech do?", answer: "We combine AI, cloud, software, automation, and analytics to help ambitious teams work smarter and grow with confidence." },
+  { question: "What does Suga S AI Tech do?", answer: "We combine AI, cloud, software, automation, and analytics to help ambitious teams work smarter and grow with confidence." },
   { question: "Can you work with an existing product or team?", answer: "Yes. We can join at the strategy, build, modernization, or optimization stage and adapt to your current workflow." },
   { question: "How do we get started?", answer: "Tell us what you are trying to achieve. We will come back with a focused conversation and a practical next step." },
 ];
@@ -218,7 +218,7 @@ export const aboutPage = {
     heading: "Technology should unlock momentum,",
     headingAccent: "not create friction.",
     paragraphs: [
-      "Zevora AI Tech was founded to help fast-moving companies turn ambitious ideas into working products. We focus on the work that moves teams forward, not on buzzwords.",
+      "Suga S AI Tech was founded to help fast-moving companies turn ambitious ideas into working products. We focus on the work that moves teams forward, not on buzzwords.",
       "Our team blends product thinking, engineering, and operations so we can help you launch faster and iterate with confidence.",
       "We partner with founders and leaders to solve real problems, build meaningful products, and keep the work grounded in value.",
     ],
@@ -234,8 +234,8 @@ export const aboutPage = {
       name: "Sugasini M",
       initials: "SM",
       role: "Chief Executive Officer (CEO)",
-      summary: "Sets the vision, strategy and direction for Zevora AI Tech.",
-      bio: "As the Chief Executive Officer of Zevora AI Tech, Sugasini M drives the company’s vision, business growth, and strategic direction. With a background in business and customer-focused operations, she brings strong capabilities in leadership, team management, client relationship management, and business development. She works closely with the technical leadership team to bridge business needs and technology, ensuring that Zevora delivers practical, scalable, and impactful solutions for its clients.",
+      summary: "Sets the vision, strategy and direction for Suga S AI Tech.",
+      bio: "As the Chief Executive Officer of Suga S AI Tech, Sugasini M drives the company’s vision, business growth, and strategic direction. With a background in business and customer-focused operations, she brings strong capabilities in leadership, team management, client relationship management, and business development. She works closely with the technical leadership team to bridge business needs and technology, ensuring that Zevora delivers practical, scalable, and impactful solutions for its clients.",
       image: "/images/suga.png",
       linkedin: "https://www.linkedin.com/in/sugasini-m-539bab417/",
     },
@@ -244,7 +244,7 @@ export const aboutPage = {
       initials: "NM",
       role: "Managing Director (MD)",
       highlight: "Operations and partnerships",
-      summary: "Nandhakumar oversees operations, partnerships, and the delivery of every client engagement at Zevora AI Tech.",
+      summary: "Nandhakumar oversees operations, partnerships, and the delivery of every client engagement at Suga S AI Tech.",
       bio: "Oversees operations, partnerships, and client success, driving sustainable growth and excellence.",
       features: [
         { title: "Operational Excellence", description: "Ensures efficient operations and delivery.", icon: Cog },
