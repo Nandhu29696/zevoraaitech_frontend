@@ -1,7 +1,9 @@
 {
   "/page": "app/page.js",
-  "/technologies/page": "app/technologies/page.js",
-  "/solutions/page": "app/solutions/page.js",
+  "/contact/page": "app/contact/page.js",
   "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/services/page": "app/services/page.js",
+  "/industries/page": "app/industries/page.js",
+  "/solutions/page": "app/solutions/page.js",
+  "/technologies/page": "app/technologies/page.js"
 }

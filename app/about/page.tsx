@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ProtectedImage from "@/components/ProtectedImage";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Linkedin, MessageCircle } from "lucide-react";
 import { aboutPage, company, stats } from "@/data/site";
@@ -74,7 +74,7 @@ export default function AboutPage() {
                     {aboutPage.team.map((member, index) => (
                         <article className={`leader-card ${index === 0 ? "leader-card-primary" : "leader-card-secondary"}`} key={member.name}>
                             <div className="leader-portrait">
-                                <Image
+                                <ProtectedImage
                                     src={member.image}
                                     alt={member.name}
                                     width={620}

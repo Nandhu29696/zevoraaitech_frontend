@@ -56,6 +56,9 @@ body {
   color: var(--white);
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 button,
 input,
@@ -1224,6 +1227,18 @@ h2 em {
   height: auto;
   padding: 28px;
   box-sizing: border-box;
+}
+.protected-image {
+  position: relative;
+  overflow: hidden;
+}
+.protected-image img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
 }
 .leader-card-secondary .leader-portrait {
   flex: 0 0 112px;

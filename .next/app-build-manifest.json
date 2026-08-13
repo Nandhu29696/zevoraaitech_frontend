@@ -16,11 +16,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/contact/page.js"
     ],
-    "/api/contact/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/contact/route.js"
-    ],
     "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -31,15 +26,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/services/page.js"
     ],
-    "/technologies/page": [
+    "/industries/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/technologies/page.js"
+      "static/chunks/app/industries/page.js"
     ],
     "/solutions/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/solutions/page.js"
+    ],
+    "/technologies/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/technologies/page.js"
     ]
   }
 }

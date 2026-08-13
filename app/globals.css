@@ -29,6 +29,10 @@ body {
     color: var(--white);
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 button,
@@ -921,11 +925,12 @@ h2 em {
     margin-bottom: 9px;
 }
 
-.footer-phone{
+.footer-phone {
     font-size: 13px;
     gap: 5px;
     display: flex;
 }
+
 .socials {
     display: flex;
     gap: 13px;
@@ -1143,7 +1148,7 @@ h2 em {
         padding-top: 1px;
         gap: 50px;
         display: flex;
-        flex-direction: column-reverse;  
+        flex-direction: column-reverse;
     }
 
     h1 {
@@ -1480,6 +1485,18 @@ h2 em {
     box-sizing: border-box;
 }
 
+.protected-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.protected-image img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
 
 /* =========================================================
    MD AVATAR
@@ -1553,12 +1570,12 @@ h2 em {
     justify-content: center;
 }
 
-.leader-actions{
+.leader-actions {
     gap: 5px;
     display: flex;
 }
 
-.leader-actions a{
+.leader-actions a {
     font-size: 12px;
     display: inline-flex;
     align-items: center;
