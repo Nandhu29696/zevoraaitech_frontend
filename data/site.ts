@@ -32,6 +32,76 @@ export const navigation = [
   { label: "Contact Us", href: "/contact", active_status: true },
 ];
 
+// ─── Footer ───────────────────────────────────────────────────────────────────
+
+export const footer = {
+  introTitle: "Build what matters next.",
+  ctaLabel: "Start a conversation",
+  exploreLabel: "Explore",
+  connectLabel: "Connect",
+  companyLabel: "Company",
+  legalLinks: [
+    { label: "Privacy Policy", href: "/legal#privacy-policy" },
+    { label: "Terms & Conditions", href: "/legal#terms-conditions" },
+  ],
+  footerNote: "Building practical AI products for growth.",
+};
+
+// ─── Legal Page ──────────────────────────────────────────────────────────────
+
+export const legalPage = {
+  eyebrow: "Legal",
+  title: "Privacy Policy & Terms & Conditions",
+  description: "This page outlines how we collect, use, and protect personal information, and the terms governing our website and services.",
+  sections: [
+    {
+      id: "privacy-policy",
+      heading: "Privacy Policy",
+      points: [
+        "We collect personal information such as your name, email address, phone number, company details, and project requirements when you contact us or engage with our services.",
+        "This information is used to respond to your inquiry, understand your requirements, and deliver the services requested by your organisation.",
+        "We do not sell, rent, or trade your personal data to third parties for marketing purposes.",
+        "We may engage trusted third-party providers to support communication, analytics, or service delivery, subject to appropriate confidentiality and data protection obligations.",
+        "You may request access, correction, or deletion of your personal data by contacting us directly.",
+      ],
+    },
+    {
+      id: "terms-conditions",
+      heading: "Terms & Conditions",
+      points: [
+        "By accessing this website, you agree to use it only for lawful purposes and in a manner that does not infringe on the rights of others or disrupt the operation of the site.",
+        "Suga S AI Tech provides consulting, software development, AI, and digital transformation services in accordance with agreed scopes, timelines, and commercial terms established in a formal proposal or contract.",
+        "We reserve the right to update, modify, or discontinue website content or services at any time without prior notice.",
+        "All content, branding, and intellectual property displayed on this website remain the property of Suga S AI Tech unless stated otherwise.",
+        "Any reliance on information provided on this website is at your own discretion, and we accept no liability for decisions made without independent professional advice where required.",
+      ],
+    },
+  ],
+};
+
+export const companyDetailsPage = {
+  eyebrow: "Company Details",
+  title: "Company Details",
+  description: "Suga S AI Tech helps businesses grow through practical AI, software, and digital transformation solutions.",
+  info: [
+    { label: "Company Name", value: company.legalName },
+    { label: "Location", value: company.location },
+    { label: "Email", value: company.email },
+    { label: "Phone", value: company.phone },
+    { label: "Phone", value: company.phone2 },
+  ],
+};
+
+export const interiorTemplate = {
+  companyEyebrow: company.name,
+  heading: "Technology should create",
+  headingAccent: "momentum.",
+  body: "We help ambitious teams turn complex challenges into clear, useful, and measurable digital products. Explore the page sections from the navigation above, then shape this area around the detail your audience needs.",
+  primaryCtaLabel: "Start a conversation",
+  secondaryCtaLabel: "Talk to our team",
+  ctaHref: "/contact",
+};
+
 // ─── Home Page ───────────────────────────────────────────────────────────────
 
 export const homePage = {

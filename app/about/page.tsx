@@ -72,94 +72,146 @@ export default function AboutPage() {
             <section className="team-section">
                 <div className="container leadership-grid">
                     {aboutPage.team.map((member, index) => (
-                        <article className={`leader-card ${index === 0 ? "leader-card-primary" : "leader-card-secondary"}`} key={member.name}>
-                            <div className="leader-portrait">
-                                <ProtectedImage
-                                    src={member.image}
-                                    alt={member.name}
-                                    width={620}
-                                    height={760}
-                                    priority={index === 0}
-                                    className="leader-image"
-                                />
-                            </div>
-
-                            <div className="leader-content">
-                                {index === 0 && (
+                        index === 0 ? (
+                            <article className={`leader-card ${index === 0 ? "leader-card-primary" : "leader-card-secondary"}`} key={member.name}>
+                                <div className="leader-portrait">
+                                    <ProtectedImage
+                                        src={member.image}
+                                        alt={member.name}
+                                        width={620}
+                                        height={760}
+                                        priority={index === 0}
+                                        className="leader-image"
+                                    />
+                                </div>
+                                <div className="leader-content">
                                     <div className="leader-badge">
                                         <span className="leader-badge-icon">★</span>
                                         <span>Leading the Company</span>
                                     </div>
-                                )}
 
-                                <div className="leader-heading">
-                                    <h3>{member.name}</h3>
+                                    <div className="leader-heading">
+                                        <h3>{member.name}</h3>
 
-                                    <p className="leader-role">
-                                        {member.role}
+                                        <p className="leader-role">
+                                            {member.role}
+                                        </p>
+                                    </div>
+
+                                    <p className="leader-copy">
+                                        {member.bio}
                                     </p>
-                                </div>
 
-                                <p className="leader-copy">
-                                    {member.bio}
-                                </p>
-
-                                <div className="leader-actions">
-                                    <a
-                                        href={member.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="leader-link"
-                                        aria-label={`Connect with ${member.name} on LinkedIn`}
-                                    >
-                                        <span className="linkedin-mark">in</span>
-                                        <span>LinkedIn</span>
-                                        <span className="leader-link-arrow">↗</span>
-                                    </a>
-                                    <a
-                                        href={`https://wa.me/${(index === 0 ? company.phone : company.phone2).replace(/\D/g, "")}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="leader-link"
-                                        aria-label={`Contact ${member.name} on WhatsApp`}
-                                    >
-                                        <MessageCircle size={10} className="whatsapp-mark" />
-                                        <span>WhatsApp</span>
-                                        <span className="leader-link-arrow">↗</span>
-                                    </a>
-                                </div>
-
-                                {member.features && (
-                                    <div className="leader-features">
-                                        {member.features.map((f) => {
-                                            const Icon = f.icon as any;
-                                            return (
-                                                <div className="leader-feature" key={f.title}>
-                                                    <div className="leader-feature-icon"><Icon size={18} /></div>
-                                                    <div className="leader-feature-text">
-                                                        <strong>{f.title}</strong>
-                                                        <p>{f.description}</p>
-                                                    </div>
-                                                </div>
-                                            );
-                                        })}
+                                    <div className="leader-actions">
+                                        <a
+                                            href={member.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="leader-link"
+                                            aria-label={`Connect with ${member.name} on LinkedIn`}
+                                        >
+                                            <span className="linkedin-mark">in</span>
+                                            <span>LinkedIn</span>
+                                            <span className="leader-link-arrow">↗</span>
+                                        </a>
+                                        <a
+                                            href={`https://wa.me/${company.phone.replace(/\D/g, "")}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="leader-link"
+                                            aria-label={`Contact ${member.name} on WhatsApp`}
+                                        >
+                                            <MessageCircle size={10} className="whatsapp-mark" />
+                                            <span>WhatsApp</span>
+                                            <span className="leader-link-arrow">↗</span>
+                                        </a>
                                     </div>
-                                )}
 
-                                {index === 0 && member.summary && (
-                                    <div className="leader-summary">
-                                        <div className="leader-summary-icon">
-                                            ✦
+                                    {member.summary && (
+                                        <div className="leader-summary">
+                                            <div className="leader-summary-icon">
+                                                ✦
+                                            </div>
+
+                                            <div className="leader-summary-content">
+                                                <strong>Overall Leadership</strong>
+                                                <p>{member.summary}</p>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </article>
+                        ) : (
+                            <article className={`leader-card ${index === 0 ? "leader-card-primary" : "leader-card-secondary"}`} key={member.name}>
+
+                                <div className="leader-content leader-content-secondary">
+                                    <div className="leader-content-top">
+                                        <div className="leader-portrait">
+                                            <ProtectedImage
+                                                src={member.image}
+                                                alt={member.name}
+                                                width={620}
+                                                height={760}
+                                                priority={index === 0}
+                                                className="leader-image"
+                                            />
+                                        </div>
+                                        <div className="leader-info-block">
+                                            <div className="leader-heading">
+                                                <h3>{member.name}</h3>
+                                                <p className="leader-role">{member.role}</p>
+                                            </div>
+
+                                            <p className="leader-copy">{member.bio}</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="leader-links-block">
+                                        <div className="leader-actions">
+                                            <a
+                                                href={member.linkedin}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="leader-link"
+                                                aria-label={`Connect with ${member.name} on LinkedIn`}
+                                            >
+                                                <span className="linkedin-mark">in</span>
+                                                <span>LinkedIn</span>
+                                                <span className="leader-link-arrow">↗</span>
+                                            </a>
+                                            <a
+                                                href={`https://wa.me/${company.phone2.replace(/\D/g, "")}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="leader-link"
+                                                aria-label={`Contact ${member.name} on WhatsApp`}
+                                            >
+                                                <MessageCircle size={10} className="whatsapp-mark" />
+                                                <span>WhatsApp</span>
+                                                <span className="leader-link-arrow">↗</span>
+                                            </a>
                                         </div>
 
-                                        <div className="leader-summary-content">
-                                            <strong>Overall Leadership</strong>
-                                            <p>{member.summary}</p>
-                                        </div>
+                                        {member.features && (
+                                            <div className="leader-features">
+                                                {member.features.map((f) => {
+                                                    const Icon = f.icon as any;
+                                                    return (
+                                                        <div className="leader-feature" key={f.title}>
+                                                            <div className="leader-feature-icon"><Icon size={18} /></div>
+                                                            <div className="leader-feature-text">
+                                                                <strong>{f.title}</strong>
+                                                                <p>{f.description}</p>
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        )}
                                     </div>
-                                )}
-                            </div>
-                        </article>
+                                </div>
+                            </article>
+                        )
                     ))}
                 </div>
             </section>
@@ -174,7 +226,7 @@ export default function AboutPage() {
                     <Link className="button button-light" href="/contact">Get in touch <ArrowUpRight size={17} /></Link>
                 </div>
             </section>
-        </main>
+        </main >
     );
 }
 

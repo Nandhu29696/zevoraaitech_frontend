@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { interiorTemplate } from "@/data/site";
 import styles from "./InteriorPage.module.css";
 
 export function InteriorPage({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
@@ -9,18 +10,18 @@ export function InteriorPage({ eyebrow, title, description }: { eyebrow: string;
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
         <p className={styles.description}>{description}</p>
-        <Link className="button" href="/contact">Start a conversation <ArrowRight size={17} /></Link>
+        <Link className="button" href={interiorTemplate.ctaHref}>{interiorTemplate.primaryCtaLabel} <ArrowRight size={17} /></Link>
       </div>
     </section>
     <section className={styles.content}>
       <div className={`container ${styles.contentGrid}`}>
         <div>
-          <p className="eyebrow">Suga S AI Tech</p>
-          <h2>Technology should create <em>momentum.</em></h2>
+          <p className="eyebrow">{interiorTemplate.companyEyebrow}</p>
+          <h2>{interiorTemplate.heading} <em>{interiorTemplate.headingAccent}</em></h2>
         </div>
         <div>
-          <p className={styles.contentText}>We help ambitious teams turn complex challenges into clear, useful, and measurable digital products. Explore the page sections from the navigation above, then shape this area around the detail your audience needs.</p>
-          <Link className="text-link" href="/contact">Talk to our team <ArrowUpRight size={17} /></Link>
+          <p className={styles.contentText}>{interiorTemplate.body}</p>
+          <Link className="text-link" href={interiorTemplate.ctaHref}>{interiorTemplate.secondaryCtaLabel} <ArrowUpRight size={17} /></Link>
         </div>
       </div>
     </section>

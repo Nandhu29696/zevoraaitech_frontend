@@ -83,7 +83,7 @@ a {
 }
 
 .brand img {
-    width: 240px;
+    /* width: 240px; */
     height: auto;
     object-fit: contain;
     object-position: left center;
@@ -94,7 +94,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 28px;
+    gap: 28px; 
     flex: 1;
 }
 
@@ -105,6 +105,7 @@ a {
     font-weight: 500;
     transition: color .2s ease;
     position: relative;
+    white-space: nowrap;
 }
 
 .main-nav a:hover {
@@ -1536,7 +1537,7 @@ h2 em {
     /* Keep MD compact */
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 
     min-height: 0;
     height: auto;
@@ -1579,7 +1580,7 @@ h2 em {
 
     overflow: hidden;
 
-    align-self: center;
+    align-self: flex-start;
 
     display: flex;
     align-items: center;
@@ -1627,7 +1628,32 @@ h2 em {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.leader-card-secondary .leader-content-secondary {
+    gap: 16px;
+}
+
+.leader-card-secondary .leader-content-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    height: auto;
+}
+
+.leader-card-secondary .leader-info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.leader-card-secondary .leader-links-block {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .leader-actions {
@@ -2146,9 +2172,9 @@ h2 em {
    SECONDARY CARD
 ========================================================= */
 
-.leader-card-secondary .leader-content {
+/* .leader-card-secondary .leader-content {
     padding-top: 58px;
-}
+} */
 
 .leader-card-secondary .leader-content h3 {
     font-size: clamp(1.8rem, 2.2vw, 3.2rem);

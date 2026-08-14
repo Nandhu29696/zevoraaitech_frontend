@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, Linkedin, Instagram, Facebook, MessageCircle } from "lucide-react";
-import { navigation, company } from "@/data/site";
+import { navigation, company, footer } from "@/data/site";
 
 export function Footer() {
   return (
@@ -8,17 +8,17 @@ export function Footer() {
       <div className="container footer-grid">
         <div className="footer-intro">
           <p className="eyebrow">{company.name.toUpperCase()}</p>
-          <h2>Build what matters next.</h2>
-          <Link className="text-link" href="/contact">Start a conversation <ArrowUpRight size={17} /></Link>
+          <h2>{footer.introTitle}</h2>
+          <Link className="text-link" href="/contact">{footer.ctaLabel} <ArrowUpRight size={17} /></Link>
         </div>
         <div className="footer-links">
-          <p className="footer-label">Explore</p>
+          <p className="footer-label">{footer.exploreLabel}</p>
           {navigation.filter((item) => item.active_status !== false).slice(1).map((item) => (
             <Link href={item.href} key={item.href}>{item.label}</Link>
           ))}
         </div>
         <div className="footer-links">
-          <p className="footer-label">Connect</p>
+          <p className="footer-label">{footer.connectLabel}</p>
           <a href={`mailto:${company.email}`}>{company.email}</a>
           <div className="footer-phone">
             <a
@@ -47,14 +47,15 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-links footer-legal-links">
-          <p className="footer-label">Company</p>
-           <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/terms-conditions">Terms & Conditions</Link>
+          <p className="footer-label">{footer.companyLabel}</p>
+          {footer.legalLinks.map((link) => (
+            <Link href={link.href} key={link.href}>{link.label}</Link>
+          ))}
         </div>
       </div>
       <div className="container footer-bottom">
         <span>{company.copyright}</span>
-        <span>{company.footerTagline}</span>
+        <span>{footer.footerNote}</span>
       </div>
     </footer>
   );

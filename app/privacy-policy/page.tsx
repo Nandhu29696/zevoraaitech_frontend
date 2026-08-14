@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy | Suga S AI Tech",
-  description: "Privacy Policy for Suga S AI Tech.",
+  title: "Privacy Policy & Terms | Suga S AI Tech",
+  description: "Privacy Policy and Terms & Conditions for Suga S AI Tech.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -14,17 +14,18 @@ export default function PrivacyPolicyPage() {
           <Link className="text-link" href="/">
             <ArrowLeft size={16} /> Back home
           </Link>
-          <p className="eyebrow">Privacy Policy</p>
-          <h1>Privacy Policy</h1>
+          <p className="eyebrow">Legal</p>
+          <h1>Privacy Policy & Terms & Conditions</h1>
           <p className="interior-description">
-            We value your privacy and are committed to protecting the personal information you share with us.
+            This page brings together our privacy practices and the terms governing the use of our website and services.
           </p>
         </div>
       </section>
 
-      <section className="section">
+      <section id="privacy-policy" className="section">
         <div className="container" style={{ maxWidth: 900 }}>
           <div className="legal-content">
+            <h2>Privacy Policy</h2>
             <p>
               Suga S AI Tech collects personal information such as name, email address, phone number, company name,
               and project details when you contact us or use our services.
@@ -39,6 +40,30 @@ export default function PrivacyPolicyPage() {
             </p>
             <p>
               You may contact us at any time to request access, correction, or deletion of your personal information.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="terms-conditions" className="section" style={{ paddingTop: 0 }}>
+        <div className="container" style={{ maxWidth: 900 }}>
+          <div className="legal-content">
+            <h2>Terms & Conditions</h2>
+            <p>
+              By accessing this website, you agree to use it only for lawful purposes and in a way that does not infringe
+              on the rights of others or interfere with the operation of the website.
+            </p>
+            <p>
+              Suga S AI Tech provides consulting, software, AI, and digital transformation services subject to agreed scopes,
+              timelines, and commercial terms set out in a formal proposal or contract.
+            </p>
+            <p>
+              We reserve the right to update, modify, or discontinue services or website elements at any time without prior
+              notice.
+            </p>
+            <p>
+              Any content, branding, or intellectual property displayed on this website remains the property of Suga S AI
+              Tech unless otherwise stated.
             </p>
           </div>
         </div>
