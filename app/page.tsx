@@ -141,13 +141,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section split-section why-zevora-section">
+      <section className="section split-section why-sugasaitech-section">
         <div className="container split-grid">
           <div>
             <p className="eyebrow">{homePage.why.eyebrow}</p>
             <h2>{homePage.why.heading}<br /><em>{homePage.why.headingAccent}</em></h2>
             <p className="large-copy">{homePage.why.body}</p>
-            <div className="why-zevora-highlights">
+            <div className="why-sugasaitech-highlights">
               <div>
                 <strong>Professionalism</strong>
                 <p>We work with discipline, clarity, and accountability at every stage of delivery.</p>

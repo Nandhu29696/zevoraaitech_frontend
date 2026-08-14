@@ -1,4 +1,4 @@
-create a project(zevora-website)
+create a project(sugasaitech-website)
 
 Vision
 
@@ -40,7 +40,7 @@ Deployment
 
 
 Folder Structure
-zevora-ai-tech/
+sugasaitech-ai-tech/
 
 ├── app/
 │   ├── about/
@@ -101,7 +101,7 @@ Industries
 
 Technology Stack
 
-Why Choose Zevora
+Why Choose sugasaitech
 
 Development Process
 

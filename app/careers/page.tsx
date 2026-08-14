@@ -24,7 +24,7 @@ export default function CareersPage() {
       <section className="culture-section">
         <div className="container">
           <div className="center-heading">
-            <p className="eyebrow">Life at Zevora</p>
+            <p className="eyebrow">Life at Suga S AI Tech</p>
             <h2>Why people choose <em>to work here.</em></h2>
           </div>
           <div className="culture-grid">

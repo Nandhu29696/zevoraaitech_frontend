@@ -10,7 +10,7 @@ import {
 export const company = {
   name: "Suga S AI Tech",
   legalName: "Suga S AI Tech ",
-  email: "hello@zevora.ai",
+  email: "hello@sugasaitech.ai",
   phone: "+91 95978 95084",
   phone2: "+91 63856 92143",
   location: "Coimbatore, India",
@@ -127,7 +127,7 @@ export const homePage = {
     ],
   },
   why: {
-    eyebrow: "Why Zevora",
+    eyebrow: "Why Suga S AI Tech",
     heading: "Complex problems.",
     headingAccent: "Clear business outcomes.",
     body: "We combine product thinking, design, and engineering so you can turn ideas into working software without the usual delays.",
@@ -280,7 +280,7 @@ export const faqs = [
 // ─── About Page ──────────────────────────────────────────────────────────────
 
 export const aboutPage = {
-  eyebrow: "About Zevora",
+  eyebrow: "About Suga S AI Tech",
   title: "Built to turn complexity into momentum.",
   description: "We help startups and ambitious teams build practical AI and software solutions that accelerate growth and simplify operations.",
   motive: {
@@ -305,7 +305,7 @@ export const aboutPage = {
       initials: "SM",
       role: "Chief Executive Officer (CEO)",
       summary: "Sets the vision, strategy and direction for Suga S AI Tech.",
-      bio: "As the Chief Executive Officer of Suga S AI Tech, Sugasini M drives the company’s vision, business growth, and strategic direction. With a background in business and customer-focused operations, she brings strong capabilities in leadership, team management, client relationship management, and business development. She works closely with the technical leadership team to bridge business needs and technology, ensuring that Zevora delivers practical, scalable, and impactful solutions for its clients.",
+      bio: "As the Chief Executive Officer of Suga S AI Tech, Sugasini M drives the company’s vision, business growth, and strategic direction. With a background in business and customer-focused operations, she brings strong capabilities in leadership, team management, client relationship management, and business development. She works closely with the technical leadership team to bridge business needs and technology, ensuring that Suga S AI Tech delivers practical, scalable, and impactful solutions for its clients.",
       image: "/images/suga.png",
       linkedin: "https://www.linkedin.com/in/sugasini-m-539bab417/",
     },
@@ -405,9 +405,9 @@ export const contactPage = {
   title: "Tell us what you want to build.",
   description: "Share your challenge, idea, or growth goal and we’ll respond with a practical next step.",
   infoItems: [
-    { label: "Email us", value: "hello@zevora.ai", href: "mailto:hello@zevora.ai" },
-    { label: "Call us", value: "+91 63856 92143", href: "tel:+916385692143" },
-    { label: "Mobile", value: "+91 95978 95084", href: "tel:+919597895084" },
+    { label: "Email us", value: "hello@Suga S AI Tech.ai", href: "mailto:hello@sugasaitech.ai" },
+    { label: "Call us", value: "+91 95978 95084", href: "tel:+919597895084" },
+    { label: "Mobile", value: "+91 63856 92143", href: "tel:+916385692143" },
     { label: "Based in", value: "Coimbatore, India", href: null },
   ],
 };
