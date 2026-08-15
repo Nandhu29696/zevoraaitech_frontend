@@ -10,7 +10,7 @@ import {
 export const company = {
   name: "Suga S AI Tech",
   legalName: "Suga S AI Tech ",
-  email: "hello@sugasaitech.ai",
+  email: "sugasaitech@gmail.com",
   phone: "+91 95978 95084",
   phone2: "+91 63856 92143",
   location: "Coimbatore, India",
@@ -401,11 +401,12 @@ export const careersPage = {
 // ─── Contact Page ─────────────────────────────────────────────────────────────
 
 export const contactPage = {
+  
   eyebrow: "Contact",
   title: "Tell us what you want to build.",
   description: "Share your challenge, idea, or growth goal and we’ll respond with a practical next step.",
   infoItems: [
-    { label: "Email us", value: "hello@Suga S AI Tech.ai", href: "mailto:hello@sugasaitech.ai" },
+    { label: "Email us", value: "sugasaitech@gmail.com", href: "mailto:sugasaitech@gmail.com" },
     { label: "Call us", value: "+91 95978 95084", href: "tel:+919597895084" },
     { label: "Mobile", value: "+91 63856 92143", href: "tel:+916385692143" },
     { label: "Based in", value: "Coimbatore, India", href: null },
