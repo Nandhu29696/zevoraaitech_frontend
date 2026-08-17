@@ -473,11 +473,9 @@ export default function ContactPage() {
             </div>
 
             <div className="contact-divider" />
-
             <p className="contact-social-label">
               Follow us
             </p>
-
             <div className="socials">
               <a
                 href={company.social.linkedin}
@@ -485,14 +483,12 @@ export default function ContactPage() {
               >
                 <Linkedin size={18} />
               </a>
-
               <a
                 href={company.social.instagram}
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
-
               <a
                 href={company.social.facebook}
                 aria-label="Facebook"
